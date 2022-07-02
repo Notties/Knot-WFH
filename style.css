@@ -170,7 +170,16 @@ button:active:before {
     text-align: center;
 }
 
-
+@media screen and (max-width: 341px) {
+    .date {
+        position: absolute;
+        top: 30px;
+        left: -63px;
+        opacity: 0;
+        transition: 1.5s;
+        font-size: 11px;
+    }
+}
 
 @media screen and (min-width: 728px) {
 
