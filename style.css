@@ -1,0 +1,259 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: 'Prompt', sans-serif;
+}
+
+
+h1 {
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+}
+
+section {
+    margin: 20px 0;
+}
+
+.timeline {
+    margin-top: 35px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 20% auto;
+    justify-content: center;
+}
+
+ul {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    left: -100px;
+}
+
+li {
+    margin-top: 30px;
+    position: relative;
+
+    padding: 25px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+li p {
+    padding: 0px;
+    text-align: left;
+    padding-left: 9px;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+.date {
+    position: absolute;
+
+    top: 30px;
+    left: -55px;
+    opacity: 0;
+    transition: 1.5s;
+    font-size: 12px;
+}
+
+.timeline-line {
+    background: rgb(228, 228, 228);
+    width: 4px;
+    border-radius: 12px;
+    position: relative;
+    justify-self: end;
+    left: -10px;
+}
+
+.timeline-point {
+    border: none;
+    position: absolute;
+
+    border-radius: 50%;
+    background: rgb(228, 228, 228);
+    width: 18px;
+    height: 18px;
+
+    top: 30px;
+    left: -21px;
+    transition: 1.5s ease;
+    cursor: pointer;
+}
+
+.timeline-innerline {
+    position: absolute;
+    background: rgb(251, 205, 228);
+    background: linear-gradient(180deg, rgba(251, 205, 228, 1) 0%, rgba(149, 199, 241, 1) 100%);
+    width: 4px;
+    height: 0%;
+
+    top: 0%;
+    left: 0%;
+
+    transition: 1s linear;
+}
+
+.header,
+h1 {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+/* From uiverse.io */
+button {
+    --color: #1D2F6F;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 13px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    cursor: pointer;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button:active:before {
+    background: #374472;
+    transition: background 0s;
+}
+.container {
+    align-items: center;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 728px) {
+
+    .timeline {
+        display: block;
+    }
+
+    .timeline-line {
+        left: 0;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+
+    li {
+        margin-top: 0px;
+        position: relative;
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+    }
+
+    li p {
+        transform: translateY(-10px);
+        opacity: 0;
+        padding: 0 10px;
+        transition: 1.5s;
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .date {
+        opacity: 0;
+        transition: 1.5s;
+        font-size: 16px;
+
+        position: absolute;
+        top: -65px;
+        left: 35%;
+    }
+
+    .timeline-point {
+        width: 15px;
+        height: 15px;
+
+        top: -40px;
+        left: 40%;
+        transition: 1.5s ease;
+        cursor: pointer;
+    }
+
+    .timeline-line {
+        width: 100%;
+        height: 4px;
+    }
+
+    .timeline-innerline {
+        position: absolute;
+        background: rgb(251, 205, 228);
+        background: linear-gradient(90deg, rgba(251, 205, 228, 1) 0%, rgba(149, 199, 241, 1) 100%);
+        width: 0%;
+        height: 4px;
+
+        top: 0%;
+        left: 0%;
+
+        transition: 1s linear;
+        border-radius: 999px;
+    }
+
+    .header,
+    h1,
+    button {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .header,
+    h1 {
+        font-size: 20px;
+    }
+    
+}
